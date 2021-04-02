@@ -1,6 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import{HashRouter, Route, Link} from 'react-router-dom';
+import Comments from '../Comments/Comments';
+import Feeling from '../Feeling/Feeling';
+import Support from '../Support/Support';
+import Understanding from '../Understanding/Understanding'
+import Home from '../Home/Home'
 
 function App() {
 
@@ -10,6 +16,23 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
+      <HashRouter>
+        <Route path='/' exact>
+          <Home />
+        </Route>
+        <Route path='/comments' exact>
+          <Comments />
+        </Route>
+        <Route path="/feeling" exact>
+          <Feeling />
+        </Route>
+        <Route path="/support" exact>
+          <Support />
+        </Route>
+        <Route path="/understanding" exact>
+          <Understanding />
+        </Route>
+      </HashRouter>
     </div>
   );
 }
