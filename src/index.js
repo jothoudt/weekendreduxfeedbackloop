@@ -32,6 +32,13 @@ const support = (state='', action)=>{
     return state;
 }
 
+const comments=(state='', action)=>{
+    if(action.type === 'add-comment'){
+        return action.payload;
+    }
+    return state;
+}
+
 const store=createStore(
     combineReducers({
         feeling: feeling,
