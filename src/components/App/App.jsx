@@ -8,6 +8,7 @@ import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 import Home from '../Home/Home';
 import Review from '../Review/Review';
+import Admin from '../Admin/Admin';
 
 function App() {
 
@@ -33,8 +34,11 @@ function App() {
         <Route path="/understanding" exact>
           <Understanding />
         </Route>
-        <Route path="/review">
+        <Route path="/review" exact>
           <Review />
+        </Route>
+        <Route path='/admin' exact>
+          <Admin />
         </Route>
       </HashRouter>
     </div>
