@@ -30,7 +30,13 @@ function Review(){
             support: support,
             comments: comments
         }
-        console.log('object to send to server', newSurvey)
+        console.log('object to send to server', newSurvey);
+        axios.post('/api/survey', newSurvey).then((respnse)=>{
+            console.log('back from post')
+        }).catch((err)=>{
+            alert(err);
+            console.log(err);
+        });
     }
 
     return(
