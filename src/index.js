@@ -12,7 +12,7 @@ import {applyMiddleware, combineReducers, createStore} from 'redux';
 const feeling = (state='', action)=>{
 if(action.type ==='add-feeling'){
     console.log('in feeling', action.payload)
-    return action.payload
+    return action.payload;
 }//end if
 return state;
 }//end feeling reducer
@@ -20,15 +20,23 @@ return state;
 const understanding = (state='', action)=>{
 if(action.type === 'add-understanding'){
     console.log('in understanding', action.payload)
-    return action.payload
+    return action.payload;
 }//end if
 return state;
 }//end understanding reducer
 
+const support = (state='', action)=>{
+    if(action.type === 'add-support'){
+        return action.payload;
+    }
+    return state;
+}
+
 const store=createStore(
     combineReducers({
         feeling: feeling,
-        understanding: understanding
+        understanding: understanding,
+        support: support,
     }), applyMiddleware(logger)
 );
 

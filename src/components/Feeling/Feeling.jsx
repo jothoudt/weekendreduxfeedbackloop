@@ -13,9 +13,12 @@ function Feeling(){
 
     const addFeeling =()=>{
         console.log(feeling);
+        //if feeling is blank will alert rather than proceed
         if(feeling === ''){
             alert('must select value')
-        }else{
+        }
+        //else dispatch selection and proceed to next page
+        else{
             dispatch({type: 'add-feeling', payload:feeling});
             history.push('/understanding');
         }

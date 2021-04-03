@@ -1,12 +1,47 @@
-import {Link} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
+import {useState} from 'react';
+import {useDispatch} from 'react-redux';
 
 function Understanding(){
+    //useState
+    let [understanding, setUnderstanding]=useState('');
+
+    //define history and dispatch
+    const history=useHistory();
+    const dispatch=useDispatch();
+
+    const addUnderstanding=()=>{
+        console.log(understanding);
+        if(understanding=''){
+            alert('Must input value');
+        }
+        else{
+            dispatch({type:'add-understanding',payload: understanding})
+            history.push('/support')
+        }
+    }
+
     return(
         <>
         <h2>Understanding</h2>
-        <Link to="/support">
-            <button>Next</button>
-        </Link>
+        <form>
+        <div class="choice">
+        <input type="radio" name="choice" value="1" onClick={(event)=> setUnderstanding(1)}/>1
+        </div>
+        <div class="choice">
+        <input type="radio" name="choice" value="2" onClick={(event)=> setUnderstanding(2)}/>2
+        </div>
+        <div class="choice">
+        <input type="radio" name="choice" value="3" onClick={(event)=> setUnderstanding(3)}/>3
+        </div>
+        <div class="choice">
+        <input type="radio" name="choice" value="4" onClick={(event)=> setUnderstanding(4)}/>4
+        </div>
+        <div class="choice">
+        <input type="radio" name="choice" value="5" onClick={(event)=> setUnderstanding(5)}/>5
+        </div>
+        </form>
+        <button onClick={addUnderstanding}>Next</button>
         </>
     )
 }
