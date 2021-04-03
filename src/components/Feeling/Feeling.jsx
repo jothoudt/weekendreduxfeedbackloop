@@ -1,15 +1,23 @@
-import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
-import {useDispatch} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
 import './Feeling.css'
 
 function Feeling(){
+    //set state of selection
     let [feeling, setFeeling]=useState('');
+
+    //define dispatch and history
+    const dispatch = useDispatch();
+    const history = useHistory();
 
     const addFeeling =()=>{
         console.log(feeling);
         if(feeling === ''){
             alert('must select value')
+        }else{
+            dispatch({type: 'add-feeling', payload:feeling});
+            history.push('/understanding');
         }
     }
 
