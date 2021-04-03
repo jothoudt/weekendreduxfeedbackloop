@@ -1,7 +1,7 @@
-import{ useSelector,useDispatch} from 'react-redux';
+import{useSelector,useDispatch} from 'react-redux';
 import {useState} from 'react';
 import axios from 'axios';
-import {useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import './Review.css'
 
 function Review(){
@@ -32,7 +32,8 @@ function Review(){
         }
         console.log('object to send to server', newSurvey);
         axios.post('/api/survey', newSurvey).then((respnse)=>{
-            console.log('back from post')
+            console.log('back from post');
+            history.push('/thanks');
         }).catch((err)=>{
             alert(err);
             console.log(err);
@@ -48,6 +49,9 @@ function Review(){
             <li>Support: {support}</li>
             <li>Comments: {comments}</li>
         </ul>
+        <Link to="/comments">
+            <button>Back</button>
+        </Link>
         <button onClick={submitSurvery}>Submit</button>
         </>
     )

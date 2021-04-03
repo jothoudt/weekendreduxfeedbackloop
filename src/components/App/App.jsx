@@ -9,6 +9,7 @@ import Understanding from '../Understanding/Understanding';
 import Home from '../Home/Home';
 import Review from '../Review/Review';
 import Admin from '../Admin/Admin';
+import Thanks from '../Thanks/Thanks';
 
 function App() {
 
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route path='/admin' exact>
           <Admin />
+        </Route>
+        <Route path='/thanks' exact>
+          <Thanks />
         </Route>
       </HashRouter>
     </div>

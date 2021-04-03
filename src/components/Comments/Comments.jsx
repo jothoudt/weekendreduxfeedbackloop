@@ -1,4 +1,4 @@
-import {useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import {useState} from 'react';
 
@@ -23,6 +23,9 @@ function Comments(){
         <h3>Any additional comments?</h3>
         <textarea name="paragraph_text" cols="50" rows="7" onChange={(event) => setComments(event.target.value)}></textarea>
         <div>
+        <Link to="/support">
+            <button>Back</button>
+        </Link>
         <button onClick={addComments}>Next</button>
         </div>
         </>

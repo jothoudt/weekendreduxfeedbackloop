@@ -1,4 +1,4 @@
-import {useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
 
@@ -41,6 +41,9 @@ function Understanding(){
         <input type="radio" name="choice" value="5" onClick={(event)=> setUnderstanding(5)}/>5
         </div>
         </form>
+        <Link to="/feeling">
+            <button>Back</button>
+        </Link>
         <button onClick={addUnderstanding}>Next</button>
         </>
     )

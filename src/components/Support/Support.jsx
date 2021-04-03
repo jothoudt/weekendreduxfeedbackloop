@@ -1,4 +1,4 @@
-import {useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import {useDispatch} from 'react-redux'
 import {useState} from 'react'
 
@@ -42,6 +42,9 @@ function Support(){
         <input type="radio" name="choice" value="5" onClick={(event)=> setSupport(5)}/>5
         </div>
         </form>
+        <Link to="/understanding">
+            <button>Back</button>
+        </Link>
         <button onClick={addSupport}>next</button>
         </>
     )
