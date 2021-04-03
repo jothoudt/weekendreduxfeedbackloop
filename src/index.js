@@ -44,6 +44,7 @@ const store=createStore(
         feeling: feeling,
         understanding: understanding,
         support: support,
+        comments: comments
     }), applyMiddleware(logger)
 );
 

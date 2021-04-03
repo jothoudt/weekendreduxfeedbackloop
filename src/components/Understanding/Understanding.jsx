@@ -12,11 +12,11 @@ function Understanding(){
 
     const addUnderstanding=()=>{
         console.log(understanding);
-        if(understanding=''){
+        if(understanding ===''){
             alert('Must input value');
         }
         else{
-            dispatch({type:'add-understanding',payload: understanding})
+            dispatch({type:'add-understanding', payload:understanding})
             history.push('/support')
         }
     }
