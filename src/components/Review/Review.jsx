@@ -24,6 +24,13 @@ function Review(){
 
     const submitSurvery=()=>{
         console.log('in submitSurvery');
+        let newSurvey={
+            feeling: feeling,
+            understanding: understanding,
+            support: support,
+            comments: comments
+        }
+        console.log('object to send to server', newSurvey)
     }
 
     return(
