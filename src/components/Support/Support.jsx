@@ -45,7 +45,7 @@ function Support(){
         <Link to="/understanding">
             <button>Back</button>
         </Link>
-        <button onClick={addSupport}>next</button>
+        <button onClick={addSupport}>Next</button>
         </>
     )
 }

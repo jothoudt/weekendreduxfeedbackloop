@@ -30,7 +30,7 @@ function Feeling(){
         <h3>How are you feeling today?</h3>
         <form>
         <div class="choice">
-        <input type="radio" name="choice" value="1" onClick={(event)=> setFeeling(1)}/>1
+        <label><input type="radio" name="choice" value="1" onClick={(event)=> setFeeling(1)}/>1</label>
         </div>
         <div class="choice">
         <input type="radio" name="choice" value="2" onClick={(event)=> setFeeling(2)}/>2
