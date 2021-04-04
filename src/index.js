@@ -14,6 +14,9 @@ if(action.type ==='add-feeling'){
     console.log('in feeling', action.payload)
     return action.payload;
 }//end if
+if(action.type ==='new-survey'){
+    return state='';
+}
 return state;
 }//end feeling reducer
 
@@ -22,6 +25,9 @@ if(action.type === 'add-understanding'){
     console.log('in understanding', action.payload)
     return action.payload;
 }//end if
+if(action.type === 'new-survey'){
+    return state = '';
+}
 return state;
 }//end understanding reducer
 
@@ -29,12 +35,18 @@ const support = (state='', action)=>{
     if(action.type === 'add-support'){
         return action.payload;
     }
+    if(action.type ==='new-survey'){
+        return state='';
+    }
     return state;
 }
 
 const comments=(state='', action)=>{
     if(action.type === 'add-comment'){
         return action.payload;
+    }
+    if(action.type === 'new-survey'){
+        return state='';
     }
     return state;
 }

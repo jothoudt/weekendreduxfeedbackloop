@@ -1,12 +1,18 @@
-import{Link} from 'react-router-dom';
+import{useHistory} from 'react-router-dom';
+import{useDispatch} from 'react-redux';
 
 function Thanks(){
+    const history=useHistory();
+    const dispatch=useDispatch();
+
+    const newSurvey=()=>{
+        dispatch({type:'new-survey', payload: null})
+        history.push('/feeling');
+    }
     return(
         <>
         <h2>Thank You!</h2>
-        <Link to="/">
-            <button>Leave new feedback</button>
-        </Link>
+        <button onClick={newSurvey}>Leave new feedback</button>
         </>
     )
 }
