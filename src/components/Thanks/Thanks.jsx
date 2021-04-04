@@ -1,5 +1,6 @@
 import{useHistory} from 'react-router-dom';
 import{useDispatch} from 'react-redux';
+import './Thanks.css';
 
 function Thanks(){
     const history=useHistory();
@@ -12,7 +13,7 @@ function Thanks(){
     return(
         <>
         <h2>Thank You!</h2>
-        <button onClick={newSurvey}>Leave new feedback</button>
+        <button className="new" onClick={newSurvey}>Leave new feedback</button>
         </>
     )
 }

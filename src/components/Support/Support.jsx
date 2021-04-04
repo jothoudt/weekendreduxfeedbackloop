@@ -24,7 +24,7 @@ function Support(){
     return(
         <>
         <h2>Support</h2>
-        <h3>How well did you feel supported today?</h3>
+        <h3>How well are you being supported?</h3>
         <form>
         <div class="choice">
         <input type="radio" name="choice" value="1" onClick={(event)=> setSupport(1)}/>1

@@ -24,6 +24,7 @@ function Understanding(){
     return(
         <>
         <h2>Understanding</h2>
+        <h3>How well are you understanding the content?</h3>
         <form>
         <div class="choice">
         <input type="radio" name="choice" value="1" onClick={(event)=> setUnderstanding(1)}/>1

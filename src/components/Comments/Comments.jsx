@@ -20,7 +20,7 @@ function Comments(){
     return(
         <>
         <h2>Comments</h2>
-        <h3>Any additional comments?</h3>
+        <h3>Any comments you want to leave?</h3>
         <textarea name="paragraph_text" cols="50" rows="7" onChange={(event) => setComments(event.target.value)}></textarea>
         <div>
         <Link to="/support">
