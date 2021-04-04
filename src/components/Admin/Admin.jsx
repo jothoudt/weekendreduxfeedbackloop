@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {useState, useEffect} from 'react';
+import './Admin.css';
 
 function Admin(){
     let [surveys, setSurveys]=useState([]);
@@ -19,13 +20,11 @@ function Admin(){
         <table>
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Feeling</th>
                     <th>Understanding</th>
                     <th>Support</th>
                     <th>Comments</th>
                     <th>flagged</th>
-                    <th>date</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,13 +32,11 @@ function Admin(){
                     return(
                         <>
                         <tr>
-                            <td>{survey.id}</td>
                             <td>{survey.feeling}</td>
                             <td>{survey.understanding}</td>
                             <td>{survey.support}</td>
                             <td>{survey.comments}</td>
                             <td>{survey.flagged}</td>
-                            <td>{survey.date}</td>
                         </tr>
                         </>
                     )

@@ -19,6 +19,7 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
+      <div className="content">
       <HashRouter>
         <Route path='/' exact>
           <Home />
@@ -45,6 +46,10 @@ function App() {
           <Thanks />
         </Route>
       </HashRouter>
+      </div>
+      <footer>
+        
+      </footer>
     </div>
   );
 }
