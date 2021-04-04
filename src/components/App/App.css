@@ -33,6 +33,8 @@ button{
   color: #EEEEEE;
   border: 3px solid #212121;
   border-radius: 4px;
+  font-family: chicle, cursive, sans-serif;
+  font-size: large;
 }
 footer{
   position: fixed;
