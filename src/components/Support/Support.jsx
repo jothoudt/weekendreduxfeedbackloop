@@ -13,7 +13,7 @@ function Support(){
 
     const addSupport =()=>{
         if(support === ''){
-            alert('Must select a value');
+            alert('Must select input');
         }
         else{
             dispatch({type:'add-support', payload:support});

@@ -15,7 +15,7 @@ function Feeling(){
         console.log(feeling);
         //if feeling is blank will alert rather than proceed
         if(feeling === ''){
-            alert('must select value')
+            alert('Must select input!')
         }
         //else dispatch selection and proceed to next page
         else{

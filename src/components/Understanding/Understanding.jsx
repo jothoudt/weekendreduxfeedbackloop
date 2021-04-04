@@ -13,7 +13,7 @@ function Understanding(){
     const addUnderstanding=()=>{
         console.log(understanding);
         if(understanding ===''){
-            alert('Must input value');
+            alert('Must select input!');
         }
         else{
             dispatch({type:'add-understanding', payload:understanding})

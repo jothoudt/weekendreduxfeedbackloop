@@ -42,7 +42,7 @@ function Review(){
 
     return(
         <>
-        <h2>Thank you for your input</h2>
+        <h2>Thank you for your input!</h2>
         <ul>
             <li>Feelings: {feeling}</li>
             <li>Understanding: {understanding}</li>

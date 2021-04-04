@@ -12,7 +12,7 @@ function Thanks(){
     }
     return(
         <>
-        <h2>Thank You!</h2>
+        <h2>Your feedback has been submitted. Thank You!</h2>
         <button className="new" onClick={newSurvey}>Leave new feedback</button>
         </>
     )
