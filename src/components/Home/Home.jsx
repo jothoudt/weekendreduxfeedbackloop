@@ -1,9 +1,10 @@
 import{Link} from 'react-router-dom'
+import './Home.css'
 
 function Home (){
     return(
         <Link to="/feeling">
-        <button>Get Started!</button>
+        <button className="start">Get Started!</button>
         </Link>
     )
 }
